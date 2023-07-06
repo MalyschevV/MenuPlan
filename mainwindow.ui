@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*
+{
+font-size:14px;
+border-radius: 5px;
+}
+
+QWidget {
+background-color: rgb(255,255,255);
+}
+
+QPushButton{
+color: black;
+background-color: rgb(220,220,220);
+    border-style: outset;
+}
+QPushButton:pressed {
+color: black;
+    background-color: rgb(134,198,91);
+    border-style: inset;
+}
+QPushButton:checked {
+color: black;
+background-color: rgb(184,240,147);
+    border-style: inset;
+}
+
+QLabel
+{
+  color: black;
+}
+
+QMenuBar
+{
+background-color: rgb(220,220,220);
+font-size:14px;
+  color: black;
+}
+
+QMenu
+{
+background-color: rgb(220,220,220);
+font-size:14px;
+  color: black;
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>Меню на</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="labelDay">
+      <property name="text">
+       <string>понедельник</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="9">
+     <widget class="QLabel" name="label">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>50</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Составление меню на неделю</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1" colspan="9">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButtonMo">
+        <property name="minimumSize">
+         <size>
+          <width>20</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Пн</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="pushButtonTu">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Вт</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="pushButtonTh">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Чт</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButtonWe">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Ср</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="6">
+       <widget class="QPushButton" name="pushButtonSu">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Вс</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="pushButtonFr">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Пт</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QPushButton" name="pushButtonSa">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+min-height:50;
+}</string>
+        </property>
+        <property name="text">
+         <string>Сб</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="9" column="1">
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="5" column="1" colspan="5">
+     <widget class="Line" name="line">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>1</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(220, 220, 220);
+background-color: rgb(220, 220, 220);
+border-width : 1.2px;</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="8">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="1">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Minimum</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="10">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="9">
+     <widget class="QPlainTextEdit" name="plainTextEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" rowspan="2" colspan="7">
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="6" column="0" colspan="3">
+       <widget class="QPlainTextEdit" name="plainTextEditDinner">
+        <property name="styleSheet">
+         <string notr="true">
+border-color: rgb(220, 220, 220);
+border-width : 1.2px;
+border-style:inset;
+</string>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="pushButtonClearB">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButtonClearL">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QPushButton" name="pushButtonClearD">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="3">
+       <widget class="QPlainTextEdit" name="plainTextEditLunch">
+        <property name="styleSheet">
+         <string notr="true">
+border-color: rgb(220, 220, 220);
+border-width : 1.2px;
+border-style:inset;
+</string>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="QPlainTextEdit" name="plainTextEditBreakfast">
+        <property name="styleSheet">
+         <string notr="true">
+border-color: rgb(220, 220, 220);
+border-width : 1.2px;
+border-style:inset;
+</string>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Обед</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Завтрак</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Ужин</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="10" column="4" colspan="6">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="pushButtonSave">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Сохранить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonClearAll">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Очистить все</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonClose">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>130</horstretch>
+          <verstretch>20</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>130</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Выйти</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>742</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="actionSaveDay"/>
+    <addaction name="actionSaveAll"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Справка</string>
+   </property>
+  </action>
+  <action name="actionSaveDay">
+   <property name="text">
+    <string>Сохранить меню на день</string>
+   </property>
+  </action>
+  <action name="actionSaveAll">
+   <property name="text">
+    <string>Сохранить меню на неделю</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

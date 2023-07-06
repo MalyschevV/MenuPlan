@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>help</class>
+ <widget class="QWidget" name="help">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>566</width>
+    <height>413</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*
+{
+font-size:14px;
+border-radius: 5px;
+}
+
+QWidget {
+background-color: rgb(255,255,255);
+}
+
+QPushButton{
+color: black;
+background-color: rgb(220,220,220);
+    border-style: outset;
+}
+QPushButton:pressed {
+color: black;
+    background-color: rgb(134,198,91);
+    border-style: inset;
+}
+QPushButton:checked {
+color: black;
+background-color: rgb(184,240,147);
+    border-style: inset;
+}
+
+QLabel
+{
+  color: black;
+}
+
+QMenuBar
+{
+background-color: rgb(220,220,220);
+font-size:14px;
+  color: black;
+}
+
+QMenu
+{
+background-color: rgb(220,220,220);
+font-size:14px;
+  color: black;
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButtonHelp">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Помощь</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QPushButton" name="pushButtonHotKeys">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Горячие клавиши</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButtonAbout">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>О программе</string>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QTextBrowser" name="textBrowser">
+     <property name="styleSheet">
+      <string notr="true">
+border-color: rgb(220, 220, 220);
+border-width : 1.2px;
+border-style:inset;
+</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QPushButton" name="pushButtonClose">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {border-color: rgb(196,0,59);
+border-width : 1.2px;
+border-style:inset;
+color: rgb(196,0,59);
+background-color: rgb(255,255,255);}
+
+QPushButton:pressed {
+color: black;
+    background-color: rgb(203,119,140);
+    border-style: inset;
+}</string>
+     </property>
+     <property name="text">
+      <string>Закрыть</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
